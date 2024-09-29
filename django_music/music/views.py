@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect, get_object_or_404
 from django.views.generic import DetailView, DeleteView, UpdateView, ListView, CreateView
 from . models import Music
-from forms import MusicUploadForm
+from .forms import MusicUploadForm
 
 class MusicCreateView(CreateView):
     model = Music
