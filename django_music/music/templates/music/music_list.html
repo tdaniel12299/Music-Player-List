@@ -1,0 +1,28 @@
+{% extends 'music/base.html %}
+
+{% block content%}
+</br>
+<div class="container">
+    <div class="row row-cols-1 rows-col-md-4">
+        {% for items in songs %}
+        <div class="col mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"> {{ item.title }}</h5>
+                    <p class="card-text"> Artist: {{ item.artist }}</p>
+                    <p class="card-text">Category: {{ item.category }}</p>
+                    <p class="card-text"> Uploaded on:{{ item.upload }}</p>
+                    <audio controls style="max-width: 100%;">
+                        <source src="{{items.song.url}}" type="audio/mpeg">
+                        Your broswer does not support the audio element.
+                    </audio>  
+                </div>
+                <div class="card footer"> 
+                    <a href="{% url 'music-detail item.id %}" class="btn btn-outline-info"> View Details</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
