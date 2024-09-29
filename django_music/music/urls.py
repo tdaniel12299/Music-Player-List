@@ -2,7 +2,6 @@ from django.urls import path
 from . import views
 from . import (
     MusicCreateView,
-    music_update,
     MusicDeleteView,
     MusicListView,
     MusicDetailView,
