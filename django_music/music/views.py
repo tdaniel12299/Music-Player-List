@@ -30,7 +30,7 @@ class MusicDeleteView(DeleteView):
     model = Music
 
 class MusicDetailView(DetailView):
-    template_name = "music/music_detail.html"
+    template_name = "music/music_details.html"
     model = Music
 
 def music_update(request, pk):
