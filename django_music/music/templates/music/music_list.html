@@ -4,7 +4,7 @@
 </br>
 <div class="container">
     <div class="row row-cols-1 rows-col-md-4">
-        {% for items in songs %}
+        {% for item in songs %}
         <div class="col mb-4">
             <div class="card h-100">
                 <div class="card-body">
@@ -18,7 +18,7 @@
                     </audio>  
                 </div>
                 <div class="card footer"> 
-                    <a href="{% url 'music-detail' item.id %}" class="btn btn-outline-info"> View Details</a>
+                    <a href="{% url 'music-details' item.id %}" class="btn btn-outline-info"> View Details</a>
                 </div>
             </div>
         </div>
